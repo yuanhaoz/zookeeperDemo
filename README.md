@@ -1,3 +1,47 @@
+# Zookeeper 服务器启动
+
+1、启动ZooKeeper服务器
+
+执行以下命令
+```markdown
+$ bin/zkServer.sh start
+```
+
+执行此命令后，你将收到以下响应
+```markdown
+$ JMX enabled by default
+$ Using config: /Users/../zookeeper-3.4.6/bin/../conf/zoo.cfg
+$ Starting zookeeper ... STARTED
+```
+
+2、启动CLI
+
+键入以下命令
+```markdown
+$ bin/zkCli.sh
+```
+
+键入上述命令后，将连接到ZooKeeper服务器，你应该得到以下响应。
+```markdown
+Connecting to localhost:2181
+................
+................
+................
+Welcome to ZooKeeper!
+................
+................
+WATCHER::
+WatchedEvent state:SyncConnected type: None path:null
+[zk: localhost:2181(CONNECTED) 0]
+```
+
+3、停止ZooKeeper服务器
+
+连接服务器并执行所有操作后，可以使用以下命令停止zookeeper服务器。
+```markdown
+$ bin/zkServer.sh stop
+```
+
 # Zookeeper API
 
 ZooKeeper有一个绑定Java和C的官方API。Zookeeper社区为大多数语言（.NET，python等）提供非官方API。使用ZooKeeper API，应用程序可以连接，交互，操作数据，协调，最后断开与ZooKeeper集合的连接。
